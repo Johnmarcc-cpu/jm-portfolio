@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Marc A. Balagot | Student Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-xs font-black shadow-md shadow-indigo-500/30">JB</span>
+        <span>John Marc<span class="text-indigo-400">.</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+        <a href="#education" class="hover:text-indigo-400 transition-colors">Education</a>
+        <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden md:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-sm transition-all">
+        Hire / OJT
+      </a>
+
+      <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white focus:outline-none">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 px-6 py-4 flex flex-col gap-4 text-sm font-medium text-slate-300">
+      <a href="#about" class="mobile-link hover:text-indigo-400">About</a>
+      <a href="#experience" class="mobile-link hover:text-indigo-400">Experience</a>
+      <a href="#skills" class="mobile-link hover:text-indigo-400">Skills</a>
+      <a href="#projects" class="mobile-link hover:text-indigo-400">Projects</a>
+      <a href="#education" class="mobile-link hover:text-indigo-400">Education</a>
+      <a href="#contact" class="mobile-link hover:text-indigo-400">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden">
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-xs font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Seeking On-the-Job Training (OJT) Opportunity
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-300 to-indigo-200">John Marc A. Balagot</span>
+        </h1>
+
+        <p class="text-lg text-slate-300 font-medium mb-4">
+          BS Information Technology Student • Pamantasan ng Lungsod ng Valenzuela
+        </p>
+
+        <p class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+          Motivated, adaptable, and hardworking IT student passionate about software development, graphic design, and game development. Committed to contributing positively and ready for hands-on industry experience.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all shadow-lg shadow-indigo-600/25">
+            Explore My Projects
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-medium text-sm transition-all">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 border-t border-slate-800/80 bg-slate-900/40">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">About Me</h2>
+          <h3 class="text-3xl font-bold text-white mb-6">Passionate about learning and applying technology</h3>
+          <p class="text-slate-400 leading-relaxed text-sm sm:text-base mb-6">
+            I am a 3rd-Year Bachelor of Science in Information Technology student at Pamantasan ng Lungsod ng Valenzuela. I take pride in combining technical implementation with creative multimedia design.
+          </p>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <span>Seeking an On-the-Job Training (OJT) opportunity</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <span>Developing strong technical, communication, and problem-solving skills</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <span>Adaptable, responsible, and eager to learn modern frameworks & systems</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5"></i>
+              <span>Ready to deliver value and grow within a professional team</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-slate-800 bg-slate-950/70 space-y-6">
+          <div class="border-b border-slate-800 pb-4">
+            <span class="text-xs text-slate-500 uppercase tracking-wider block">Institution</span>
+            <span class="text-base font-semibold text-white">Pamantasan ng Lungsod ng Valenzuela</span>
+          </div>
+          <div class="border-b border-slate-800 pb-4">
+            <span class="text-xs text-slate-500 uppercase tracking-wider block">Degree</span>
+            <span class="text-base font-semibold text-white">BS Information Technology (4th Year)</span>
+          </div>
+          <div class="border-b border-slate-800 pb-4">
+            <span class="text-xs text-slate-500 uppercase tracking-wider block">Location</span>
+            <span class="text-base font-semibold text-white">Gen. T. De Leon, Valenzuela City</span>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 uppercase tracking-wider block">Primary Objective</span>
+            <span class="text-base font-semibold text-indigo-300">OJT Placement / Internship</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 px-6 border-t border-slate-800/80">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Work Experience</h2>
+          <h3 class="text-3xl font-bold text-white">Professional Growth & Leadership</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Crew Trainer -->
+          <div class="p-6 rounded-xl border border-indigo-500/40 bg-slate-900/60 shadow-lg shadow-indigo-950/30">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">March 2025 - Present</span>
+              <span class="text-xs text-slate-400">McDonald's</span>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">Crew Trainer</h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+              <li>• Trained and assisted new crew members in workflow standard procedures.</li>
+              <li>• Supported food preparation, customer service, and food safety standards.</li>
+              <li>• Maintained workplace quality standards and overall cleanliness.</li>
+              <li>• Demonstrated active team leadership to drive smooth day-to-day operations.</li>
+            </ul>
+          </div>
+
+          <!-- Production Crew -->
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-900/40">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">March 2023 - 2025</span>
+              <span class="text-xs text-slate-400">McDonald's</span>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">Production Crew</h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+              <li>• Prepared food products adhering directly to company quality standards.</li>
+              <li>• Maintained a clean, compliant, and well-organized workspace.</li>
+              <li>• Delivered fast, customer-oriented assistance during peak hours.</li>
+              <li>• Strengthened time management, teamwork, and quick problem-solving skills.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 border-t border-slate-800/80 bg-slate-900/40">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Capabilities</h2>
+          <h3 class="text-3xl font-bold text-white">Technical & Interpersonal Skills</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/70">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center">
+                <i data-lucide="code-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white">Technical Skills</h4>
+                <p class="text-xs text-slate-400">Languages, tools, and platforms</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">HTML & CSS (Media Queries)</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">JavaScript (Basic / ES6+)</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">React.js & TypeScript</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">PHP & SQL (MySQL)</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Graphic Design (Photoshop)</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Basic Video Editing</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Microsoft Office Suite</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Technical Documentation</div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/70">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white">Soft Skills</h4>
+                <p class="text-xs text-slate-400">Workplace competencies and team collaboration</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Communication Skills</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Teamwork & Collaboration</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Time Management</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Adaptability</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Problem Solving</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Creative Thinking</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Responsibility</div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">Eagerness to Learn</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section With Image Templates -->
+    <section id="projects" class="py-20 px-6 border-t border-slate-800/80">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Portfolio Projects</h2>
+            <h3 class="text-3xl font-bold text-white">Academic & Practical Works</h3>
+          </div>
+          <p class="text-slate-400 text-sm mt-2 md:mt-0 max-w-md">
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- 1. AttendScan -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <!-- IMAGE CONTAINER TEMPLATE -->
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path (e.g. src="assets/images/attendscan.png") -->
+                <img 
+                  src="images/attendscan.png" 
+                  alt="AttendScan QR System Preview" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Software Dev
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">AttendScan: Daily Attendance QR System</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  An attendance tracking system allowing students to log in via secure QR codes while instructors manage records and export CSV reports in real-time.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">React</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">TypeScript</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ARTA-Compliant System -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/artacompliantcss.png" 
+                  alt="ARTA-Compliant Citizen Feedback System Preview" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  App Dev
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">ARTA-Compliant Citizen Feedback System</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Automated Customer Satisfaction Survey system for the City of Valenzuela, built as a progressive, offline-ready web application backed by Firebase.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">React.js</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Firebase</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">HTML5/CSS3</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">JavaScript ES6+</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. ZHIWEIZAI Restaurant Website -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/websiteforzhiweizai.png"
+                  alt="ZHIWEIZAI Restaurant Preview" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Quantitative Method
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">ZHIWEIZAI Restaurant Website</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Full-stack responsive restaurant website for a local Chinese dining client in Valenzuela with dynamic catering and menu options deployed via Namecheap.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">PHP</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">SQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">JavaScript</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Media Queries</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. GradeTracker System -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/gradetracker.png" 
+                  alt="GradeTracker System Preview" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Event-Driven
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">GradeTracker Performance System</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Academic tracking software designed to visualize performance trends and monitor student scores across multiple enrolled subjects.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">PyCharm</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Digital Game: Royal Rumble -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/digitalgame_royalrumble.jpe"
+                  alt="Royal Rumble Game Preview" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                 <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">1st Place Winner
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">Hari Ng Kalsada: Royal Rumble</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Digital spin-off video game awarded 1st place in its category. Features customized graphical assets, sound effects, and gameplay loops developed in Unity.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Unity</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Photoshop</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">C#</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Hybrid Board Game -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/hybridboardgames.jpe"
+                  alt="Hari Ng Kalsada Hybrid Boardgame Preview" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Hybrid Board Game
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">Hari Ng Kalsada (Board Game)</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Custom-made physical board game accompanied by a mobile companion app built using Unity for interactive turn tracking and board events.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Unity App</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Physical Fabrication</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. JMAR Personal Portfolio -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/projectinwebsys.png" 
+                  alt="JMAR Website Portfolio Project in Websys" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Web Systems
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">JMAR Personal Web Portfolio</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Responsive portfolio created in Web Systems using HTML, CSS, JavaScript, and custom media queries featuring personal work and interactive gallery sections.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">HTML5</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">CSS3</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Photoshop: Blending Mode -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/Balagot_BlendingMode2.png"
+                  alt="Pop-Art Blending Mode Artwork" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Multimedia Design
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">Pop-Art Portrait (Blending Mode)</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  "She Shines With Grace and Strength" digital pop-art poster using advanced Photoshop layer blending modes, masking, and dynamic light burst adjustments.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Adobe Photoshop</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Blending Mode</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Poster Art</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Photoshop: Clipping Mask -->
+          <div class="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden flex flex-col justify-between hover:border-slate-700 transition-all group">
+            <div>
+              <div class="relative w-full h-48 bg-slate-950 border-b border-slate-800 overflow-hidden">
+                <!-- Replace src with your image path -->
+                <img 
+                  src="images/Balagot_ClippingMask2.png"
+                  alt="Clipping Mask Typography Artwork" 
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <span class="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-950/80 border border-slate-700 text-slate-300 backdrop-blur-sm">
+                  Multimedia Design
+                </span>
+              </div>
+
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-white mb-2">Typography Clipping Mask Poster</h4>
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Typography-driven design where visual art details are masked directly into textual lettering against a high-contrast layout.
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800/80">
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Adobe Photoshop</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Clipping Mask</span>
+                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-slate-300">Typography</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6 border-t border-slate-800/80 bg-slate-900/40">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Academic Journey</h2>
+          <h3 class="text-3xl font-bold text-white">Educational Background</h3>
+        </div>
+
+        <div class="space-y-6">
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-semibold text-indigo-400">2023 - Present</span>
+              <h4 class="text-lg font-bold text-white">Pamantasan ng Lungsod ng Valenzuela</h4>
+              <p class="text-sm text-slate-400">4th-Year College Student — Bachelor of Science in Information Technology</p>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-semibold text-indigo-400">2021 - 2023</span>
+              <h4 class="text-lg font-bold text-white">Electron College of Technical Education</h4>
+              <p class="text-sm text-slate-400">Senior High School — STEM Strand</p>
+            </div>
+            <span class="self-start sm:self-center px-3 py-1 rounded bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">With Honors</span>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-semibold text-indigo-400">2017 - 2021</span>
+              <h4 class="text-lg font-bold text-white">Gen. T. De Leon National High School</h4>
+              <p class="text-sm text-slate-400">Junior High School</p>
+            </div>
+            <span class="self-start sm:self-center px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">With High Honors</span>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-800 bg-slate-950/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-xs font-semibold text-indigo-400">2011 - 2017</span>
+              <h4 class="text-lg font-bold text-white">Gen. T. De Leon Elementary School</h4>
+              <p class="text-sm text-slate-400">Primary Education (Kinder to Grade 6)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 border-t border-slate-800/80">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-14">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Connect</h2>
+          <h3 class="text-3xl font-bold text-white mb-4">Contact Information</h3>
+          <p class="text-slate-400 text-sm">
+            Feel free to reach out directly for OJT positions, project inquiries, or collaborations.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="mailto:marcjohnbalagot@gmail.com" class="p-5 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-indigo-500/50 transition-all flex flex-col items-center text-center">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-3">
+              <img src="images/gmailicon.webp" alt="Email" class="w-5 h-5 object-contain" />
+            </div>
+            <span class="text-xs text-slate-500 font-medium uppercase">Email</span>
+            <span class="text-xs font-semibold text-white mt-1 break-all">marcjohnbalagot@gmail.com</span>
+          </a>
+
+          <a href="tel:09692808299" class="p-5 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-indigo-500/50 transition-all flex flex-col items-center text-center">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3">
+              <img src="images/callicon.png" alt="Phone" class="w-5 h-5 object-contain" />
+            </div>
+            <span class="text-xs text-slate-500 font-medium uppercase">Phone</span>
+            <span class="text-xs font-semibold text-white mt-1">0969-280-8299</span>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" class="p-5 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-indigo-500/50 transition-all flex flex-col items-center text-center">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center mb-3">
+              <img src="images/linkedinlogo.png" alt="LinkedIn" class="w-5 h-5 object-contain" />
+            </div>
+            <span class="text-xs text-slate-500 font-medium uppercase">LinkedIn</span>
+            <span class="text-xs font-semibold text-white mt-1">John Marc Balagot</span>
+          </a>
+
+          <div class="p-5 rounded-xl border border-slate-800 bg-slate-900/60 flex flex-col items-center text-center">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-3">
+              <img src="images/locationicon.png" alt="Location" class="w-5 h-5 object-contain" />
+            </div>
+            <span class="text-xs text-slate-500 font-medium uppercase">Address</span>
+            <span class="text-xs font-semibold text-white mt-1">4188 Diam St, Gen. T. De Leon, Valenzuela</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 px-6 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 John Marc A. Balagot. All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <span>BSIT Student • Pamantasan ng Lungsod ng Valenzuela</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
